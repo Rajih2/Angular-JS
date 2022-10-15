@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ngCtrlApp">
+<head>
+    <title>Directives</title>
+    <script src="D:\vsc\angular.min.js"></script>
+    <script>
+        var ngApp=angular.module('ngCtrlApp',[]);
+        ngApp.controller('myController',function($scope){
+            $scope.msg="Enjoy"
+        });
+    </script>
+</head>
+<body ng-app>
+    <h1>AngularJs Directives</h1>
+    <center>
+        <div>
+            <p>{{10+20}}</p><br>
+            <p>{{"Welcome"+" "+"Raji"}}</p><br>
+            <p>{{true*false}}</p><br>
+            <p>{{100*2}}</p>
+        </div>
+        <div>
+            Course<input type="text" x-model="course"><br>
+            {{course}}
+        </div>
+        <div ng-init="arr=[500,505,520,515]">
+            <ol>
+                <li ng-repeat="a in arr">{{a}}</li>
+            </ol>
+        </div>
+        <div ng-init="checked=true">
+            New user: <input type="checkbox" ng-model="checked">
+            <br>
+            Name: <input type="text" ng-if="checked"><br>
+            Read only <input type="text" ng-readonly="checked" value="hi">
+            <br>
+            Disabled: <input type="text" ng-disabled="checked" value="hello">
+        </div><br>
+        <div ng-controller="myController">
+            Controller Msg : {{msg}}
+        </div>
+    </center>
+</body>
+</html>
+//built in directives
