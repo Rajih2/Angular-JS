@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="custApp">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script type="text/javascript">
+	var app=angular.module("custApp",[]);
+	//controller
+	app.controller('myCustomer',function($scope){
+		//model
+		$scope.customer={
+			'Name':'Raji',
+			'Gender':'Female',
+			'Job':'IT'
+	}
+});
+</script>
+</head>
+<body>
+<h1>Angular Try with MVC</h1>
+<!--view-->
+<div ng-controller='myCustomer'>
+  <p>Name {{customer.Name}}</p>
+  </br>
+  <p>Gender {{customer.Gender}}</p>
+  </br>
+  <p>Job {{customer.Job}}</p>
+  </br>
+</div>
+</body>
+</html>
