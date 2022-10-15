@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Expression</title>
+    <script src="D:\vsc\angular.min.js"></script>
+</head>
+<body ng-app>
+    <center>
+        <div>
+            <p>{{10+20}}</p><br
+            <p>{{"Welcome"+" "+"Raji"}}</p><br>
+            <p>{{true*false}}</p><br>
+            <p>{{100*2}}</p>
+        </div>
+        <div ng-init="s=25">
+            Area of a square whose side is 25 =
+            {{s*s}} <br>
+            <span ng-bind="s*s"></span>
+        </div>
+        <div ng-init="r=10;pi=3.14">
+            Area of a circle whose r is 10 ={{2*r*pi*r}}
+        </div>
+        <div ng-init="Fname='raji';Lname='h'">
+            {{Fname}}<br>
+            {{Lname}}
+        </div>
+        <div ng-init="arr=[500,510,520]">
+            {{arr[2]}}
+        </div>
+        <div ng-init="employee={name:'Arun',id:200,age:21}">
+            Name :{{employee.name}}<br>
+            ID :{{employee.id}}<br>
+            Age :{{employee.age}}
+        </div>
+    </center>
+</body>
+</html>
+//Expressions
