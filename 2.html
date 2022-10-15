@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <title>DataBinding</title>
+    <script src="D:\vsc\angular.min.js"></script>
+    <script>
+        var app= angular.module("myApp",[]);
+        app.controller("oneWay",function($scope){
+            $scope.msg="Raji learns AngularJs";
+        });
+    </script>
+</head>
+<body bg=""yellow">
+    <center>
+        <h1>oneWay Data Binding</h1>
+        <div ng-controller="oneWay">
+            {{msg}}
+    <br>
+        <span ng-bind="msg"></span>
+    </div>
+    </center>
+</body>
+</html>
